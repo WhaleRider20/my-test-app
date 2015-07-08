@@ -9,7 +9,7 @@ $config = [
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
-            'cookieValidationKey' => '',
+            'cookieValidationKey' => 'asdasdasdasdasdasdasdasdasd123123asdasdasdasdasdad',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -18,6 +18,13 @@ $config = [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
                 ],
+            ],
+        ],
+        'urlManager' => [
+            'enablePrettyUrl' => true,
+            'showScriptName' => false,
+            'rules' => [
+
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
